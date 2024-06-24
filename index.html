@@ -23,11 +23,12 @@
             display: flex;
             justify-content: center;
             background-color: #20232a;
+            flex-wrap: wrap;
             padding: 10px 0;
         }
         nav a {
             color: #61dafb;
-            margin: 0 15px;
+            margin: 5px 10px;
             text-decoration: none;
             font-weight: bold;
         }
@@ -41,6 +42,7 @@
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding-bottom: 100px; /* Add padding to avoid content being cut off by footer */
         }
         .section {
             margin-bottom: 40px;
@@ -72,6 +74,36 @@
         .contact-info a {
             color: #61dafb;
             text-decoration: none;
+        }
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .content {
+                padding: 15px;
+            }
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 5px 0;
+            }
+            footer {
+                padding: 10px;
+                font-size: 0.9em;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            .content {
+                padding: 10px;
+            }
+            .section h2 {
+                font-size: 1.2em;
+            }
+            footer {
+                font-size: 0.8em;
+            }
         }
     </style>
 </head>
