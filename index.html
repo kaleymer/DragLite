@@ -167,16 +167,18 @@
             <h2>Implementation</h2>
                 <p>The DragLite project's implementation involved several key technical steps, focusing on integrating the ESP32 microcontroller with the NEO-M9N GPS module and the ST7735 OLED display.</p>
                 <h3>Hardware Integration</h3>
-                <p>The connections for the ST7735 display were carefully mapped to the ESP32's SPI pins, ensuring efficient communication:</p>
+                <p>The connections for the ST7735 display and NEO M9N were carefully mapped to the ESP32's SPI pins:</p>
                 <ul>
                   <li><strong>MOSI (Pin 23 on ESP32)</strong> -> Connected to <strong>MOSI</strong> on ST7735</li>
                   <li><strong>MISO (Pin 19 on ESP32)</strong> -> Connected to <strong>MISO</strong> on ST7735</li>
                   <li><strong>SCK (Pin 18 on ESP32)</strong> -> Connected to <strong>SCK</strong> on ST7735</li>
                   <li><strong>SS (Pin 5 on ESP32)</strong> -> Connected to <strong>CS</strong> on ST7735</li>
-                  <li><strong>DC (GPIO 16 on ESP32)</strong> -> Used for Data/Command</li>
-                  <li><strong>RST (GPIO 17 on ESP32)</strong> -> Used for Reset</li>
-                  <li><strong>VCC</strong> -> 3.3V on ESP32</li>
-                  <li><strong>GND</strong> -> GND on ESP32</li>
+                  <li><strong>DC (GPIO 16 on ESP32)</strong> -> Used for Data/Command on ST7735</li>
+                  <li><strong>RST (GPIO 17 on ESP32)</strong> -> Used for Reset on ST7735</li>
+                  <li><strong>RST (GPIO 22 on ESP32)</strong> -> Used for SCL on NEO M9N</li>
+                  <li><strong>RST (GPIO 21 on ESP32)</strong> -> Used for SDA on NEO M9N</li>
+                  <li><strong>VCC</strong> -> 3.3V on both devices</li>
+                  <li><strong>GND</strong> -> GND on both device</li>
                 </ul>
                 <h3>Software Implementation</h3>
                 <ol>
