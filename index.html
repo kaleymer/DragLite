@@ -166,11 +166,28 @@
         <section id="implementation" class="section">
             <h2>Implementation</h2>
             <p>This section covers the development and integration of all hardware and software components:</p>
-            <ul>
-                <li><strong>Hardware Integration:</strong> Assembled the ESP32, GPS module, and accelerometer onto a custom PCB.</li>
-                <li><strong>Firmware Development:</strong> Programmed the ESP32 to process data from the GPS and accelerometer, and display it on the OLED screen.</li>
-                <li><strong>Testing and Debugging:</strong> Conducted multiple rounds of testing to ensure accurate data processing and display.</li>
-            </ul>
+            <h2>Implementation</h2>
+                <p>The DragLite project's implementation involved several key technical steps, focusing on integrating the ESP32 microcontroller with the NEO-M9N GPS module and the ST7735 OLED display.</p>
+                <h3>Hardware Integration</h3>
+                <p>The connections for the ST7735 display were carefully mapped to the ESP32's SPI pins, ensuring efficient communication:</p>
+                <ul>
+                  <li><strong>MOSI (Pin 23 on ESP32)</strong> -> Connected to <strong>MOSI</strong> on ST7735</li>
+                  <li><strong>MISO (Pin 19 on ESP32)</strong> -> Connected to <strong>MISO</strong> on ST7735</li>
+                  <li><strong>SCK (Pin 18 on ESP32)</strong> -> Connected to <strong>SCK</strong> on ST7735</li>
+                  <li><strong>SS (Pin 5 on ESP32)</strong> -> Connected to <strong>CS</strong> on ST7735</li>
+                  <li><strong>DC (GPIO 16 on ESP32)</strong> -> Used for Data/Command</li>
+                  <li><strong>RST (GPIO 17 on ESP32)</strong> -> Used for Reset</li>
+                  <li><strong>VCC</strong> -> 3.3V on ESP32</li>
+                  <li><strong>GND</strong> -> GND on ESP32</li>
+                </ul>
+                <h3>Software Implementation</h3>
+                <ol>
+                  <li><strong>Initial Setup:</strong> The setup began by initializing the ESP32 and GPS module, configuring the GPS to disable unnecessary NMEA messages to optimize communication and reduce load. The ESP32 was programmed to process incoming GPS data, extract essential information like speed, and send it to the display.</li>
+                  <li><strong>Display Management:</strong> The OLED display, originally a smaller 0.9" model, was upgraded to a 160x128 ST7735 for better visibility and data presentation. The display updates were optimized to minimize flicker and unnecessary refreshes, enhancing user experience.</li>
+                  <li><strong>Performance Tuning:</strong> Key improvements were made to ensure accurate and reliable data transmission between the GPS module and the ESP32, with careful management of refresh rates and parsing routines. The system was tuned to provide real-time feedback, particularly in measuring 0-60 times, which required precise timing and data handling.</li>
+                </ol>
+                <p>The result is a fully functional, real-time telemetry device that provides valuable performance insights for car enthusiasts, displaying data clearly and efficiently on the upgraded OLED screen.</p>
+
         </section>
         <section id="results" class="section">
             <h2>Results and Evaluation</h2>
