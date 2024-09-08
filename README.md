@@ -23,7 +23,7 @@
 - Optimized display updates
 - Precise 0-60 timing
 
-<img src="https://github.com/kaleymer/DragLite/blob/5bca0145ccce68514234235b1979ec339c5ea824/images/IMG_7219.jpeg" alt="DragLite Build" width="400"/>
+<img src="https://github.com/kaleymer/DragLite/blob/5bca0145ccce68514234235b1979ec339c5ea824/images/IMG_7219.JPG" alt="DragLite Build" width="400"/>
 
 
 ## Results
