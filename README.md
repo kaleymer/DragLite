@@ -2,6 +2,8 @@
 
 **DragLite** is a custom GPS telemetry device built with an ESP32 and NEO-M9N GPS module, designed to track vehicle acceleration and display metrics on an OLED screen. It’s tailored for car enthusiasts to measure performance such as 0-60 times.
 
+![DragLite](https://github.com/kaleymer/DragLite/blob/5bca0145ccce68514234235b1979ec339c5ea824/images/IMG_0300.jpeg)
+
 ## Project Timeline
 
 1. **Phase 1**: Hardware selection, GPS/ESP32 testing.
